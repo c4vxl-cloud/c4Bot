@@ -94,6 +94,8 @@ class C4Cloud(bot: Bot) {
                         return@registerSlashCommand
                     }
 
+                    connectedUsers.remove(event.user)
+
                     event.replyEmbeds(Embeds.EMBED_LOGOUT_SUCCESS).setEphemeral(true).queue()
                 }
 
