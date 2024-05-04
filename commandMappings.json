@@ -1,0 +1,202 @@
+[
+  {
+    "name": "mkdir",
+    "description": "Create a folder",
+    "request": "filesystem_create_folder",
+    "response": "success",
+    "args": [
+      {
+        "name": "path",
+        "description": "Pass the path for your directory"
+      }
+    ]
+  },
+
+  {
+    "name": "touch",
+    "description": "Create a file",
+    "request": "filesystem_create_file",
+    "response": "success",
+    "args": [
+      {
+        "name": "path",
+        "description": "Pass the path for your file"
+      }
+    ]
+  },
+
+  {
+    "name": "rm",
+    "description": "Delete a file or folder",
+    "request": "filesystem_delete",
+    "response": "success",
+    "args": [
+      {
+        "name": "path",
+        "description": "Pass the path to your file or directory"
+      }
+    ]
+  },
+
+  {
+    "name": "mv",
+    "description": "Move a file or folder into another Folder",
+    "request": "filesystem_move",
+    "response": "success",
+    "args": [
+      {
+        "name": "path",
+        "description": "Pass the path to your file or directory"
+      },
+      {
+        "name": "dest",
+        "description": "Pass the destination"
+      }
+    ]
+  },
+
+  {
+    "name": "sc",
+    "description": "Set the content of a file",
+    "request": "filesystem_set_file_content",
+    "response": "success",
+    "args": [
+      {
+        "name": "path",
+        "description": "Pass the path to your file"
+      },
+      {
+        "name": "newContent",
+        "description": "Pass the new Content for the file"
+      }
+    ]
+  },
+
+  {
+    "name": "gc",
+    "description": "Get the content of a file",
+    "request": "filesystem_get_file_content",
+    "response": "content",
+    "args": [
+      {
+        "name": "path",
+        "description": "Pass the path to your file"
+      },
+      {
+        "name": "newContent",
+        "description": "Pass the new Content for the file"
+      }
+    ]
+  },
+
+  {
+    "name": "gh",
+    "description": "Get the hash of a file",
+    "request": "filesystem_file_hash",
+    "response": "content",
+    "args": [
+      {
+        "name": "path",
+        "description": "Pass the path to your file"
+      }
+    ]
+  },
+
+  {
+    "name": "comp",
+    "description": "Compile a folder to a .zip archive",
+    "request": "filesystem_compile",
+    "response": "success",
+    "args": [
+      {
+        "name": "path",
+        "description": "Pass the path to your folder"
+      }
+    ]
+  },
+
+  {
+    "name": "dcomp",
+    "description": "Decompile a .zip archive",
+    "request": "filesystem_decompile",
+    "response": "success",
+    "args": [
+      {
+        "name": "path",
+        "description": "Pass the path to your .zip archive"
+      }
+    ]
+  },
+
+  {
+    "name": "rn",
+    "description": "Rename a file or directory",
+    "request": "filesystem_rename",
+    "response": "success",
+    "args": [
+      {
+        "name": "path",
+        "description": "Pass the path to your file or folder"
+      },
+      {
+        "name": "newName",
+        "description": "Pass the new Name"
+      }
+    ]
+  },
+
+  {
+    "name": "ls",
+    "description": "List all files and folders in a specified directory",
+    "request": "filesystem_list",
+    "response": "content",
+    "args": [
+      {
+        "name": "path",
+        "description": "Pass the directory to list all files and folders in"
+      }
+    ]
+  },
+
+  {
+    "name": "cb",
+    "description": "Create a Backup",
+    "request": "backups_create",
+    "response": "success",
+    "args": []
+  },
+
+  {
+    "name": "db",
+    "description": "Delete a Backup",
+    "request": "backups_remove",
+    "response": "success",
+    "args": [
+      {
+        "name": "backupId",
+        "description": "Pass the ID of your Backup"
+      }
+    ]
+  },
+
+  {
+    "name": "loadb",
+    "description": "Load a Backup",
+    "request": "backups_load",
+    "response": "success",
+    "args": [
+      {
+        "name": "backupId",
+        "description": "Pass the ID of your Backup"
+      }
+    ]
+  },
+
+  {
+    "name": "lb",
+    "description": "List all of your Backups",
+    "request": "backups_list",
+    "response": "content",
+    "args": []
+  }
+]
